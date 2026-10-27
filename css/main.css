@@ -1,0 +1,15 @@
+/**
+ * Bocadit Mini Donas - Master Stylesheet
+ * Arquitectura Modular desacoplada bajo SRP
+ */
+@import 'variables.css';
+@import 'base.css';
+@import 'header.css';
+@import 'hero.css';
+@import 'catalog.css';
+@import 'how-to-order.css';
+@import 'footer.css';
+@import 'drawer.css';
+@import 'delivery.css';
+@import 'admin.css';
+@import 'responsive.css';

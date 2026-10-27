@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bocadit Mini Donas - Menú Oficial</title>
+  <meta name="description" content="Menú oficial de Bocadit Mini Donas. Mini donas artesanales en presentaciones de 8 y 16 piezas, snacks y crepas.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Google Fonts: Fraunces (Warm, Rounded Serif) & Plus Jakarta Sans (Clean Modern UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,600..900,50..100&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+
+  <!-- ENCABEZADO COMPACTO FIJO (STICKY) -->
+  <header class="site-header">
+    <div class="container header-main">
+      <div class="header-left">
+        <a href="#" class="logo-container" aria-label="Bocadit Mini Donas Inicio">
+          <img src="assets/logo.png" alt="Bocadit Mini Donas" class="logo-img">
+        </a>
+
+        <nav class="nav-desktop" aria-label="Navegación principal">
+          <ul class="nav-links">
+            <li><a href="#menu" class="nav-link active">Menú</a></li>
+            <li><a href="#como-pedir" class="nav-link">Cómo pedir</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header-actions">
+        <button class="btn-order-cta" id="btnHeaderOrder" aria-label="Hacer pedido ahora">
+          <span>Hacer pedido</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- FRANJA ROSA DE ANUNCIO (Se desplaza con el contenido) -->
+  <div class="announcement-bar" role="region" aria-label="Anuncio">
+    <div class="container announcement-content">
+      <svg class="sprinkles-svg" width="22" height="13" viewBox="0 0 22 13" fill="none" aria-hidden="true">
+        <rect x="2" y="8" width="8" height="3" rx="1.5" transform="rotate(-25 2 8)" fill="#6CB258"/>
+        <rect x="10" y="1" width="8" height="3" rx="1.5" transform="rotate(50 10 1)" fill="#F67794"/>
+        <rect x="13" y="9" width="7" height="3" rx="1.5" transform="rotate(35 13 9)" fill="#EE4760"/>
+      </svg>
+      <span>Mini donas, grandes antojos</span>
+      <svg class="sprinkles-svg" width="22" height="13" viewBox="0 0 22 13" fill="none" aria-hidden="true">
+        <rect x="2" y="1" width="8" height="3" rx="1.5" transform="rotate(45 2 1)" fill="#F67794"/>
+        <rect x="11" y="7" width="8" height="3" rx="1.5" transform="rotate(-25 11 7)" fill="#28BCEB"/>
+        <rect x="5" y="10" width="7" height="3" rx="1.5" transform="rotate(35 5 10)" fill="#EE4760"/>
+      </svg>
+    </div>
+  </div>
+
+  <main>
+    <!-- SECCIÓN PRINCIPAL (HERO) -->
+    <section class="hero-section" aria-label="Presentación">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-title-group">
+            <h1 class="hero-title">
+              Tu antojo<img src="assets/petals.png" alt="" class="hero-petals-icon" aria-hidden="true"><br>tiene nombre.
+            </h1>
+          </div>
+          <p class="hero-subtitle">Elige tu sabor favorito y disfruta cada bocadit.</p>
+        </div>
+
+        <div class="hero-visual">
+          <img src="assets/hero_blended.png" alt="Vaso de Mini Donas Bocadit con cubierta y chispas" class="hero-img" loading="eager">
+        </div>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section class="catalog-section container" id="menu" aria-label="Catálogo de productos">
+      <div class="catalog-bar">
+        <div class="catalog-heading-wrap">
+          <img src="assets/petals.png" alt="" class="menu-petals-icon" aria-hidden="true">
+          <h2 class="catalog-title">Nuestro menú</h2>
+        </div>
+
+        <div class="search-wrapper">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="catalogSearch" class="search-input" placeholder="Buscar un sabor…" aria-label="Buscar un sabor">
+        </div>
+
+        <div class="category-pills" role="tablist" aria-label="Filtro de productos">
+          <button class="cat-btn active" data-category="donas" role="tab" aria-selected="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="3.5"></circle></svg>
+            <span>Mini donas</span>
+          </button>
+          <button class="cat-btn" data-category="snacks" role="tab" aria-selected="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+            <span>Snacks</span>
+          </button>
+          <button class="cat-btn" data-category="crepas" role="tab" aria-selected="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="12 2 2 22 22 22 12 2"></polygon></svg>
+            <span>Crepas</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Cuadrícula de productos: 4 cols en desktop, 2 en tablet, 1 en mobile -->
+      <div class="products-grid" id="productsGrid" role="region" aria-live="polite">
+        <!-- Renderizado dinámicamente -->
+      </div>
+
+      <!-- Estado vacío -->
+      <div class="empty-state" id="emptyState" role="status">
+        <h3>No encontramos ese sabor</h3>
+        <p>Prueba buscando con otra palabra o revisa nuestras categorías.</p>
+      </div>
+    </section>
+
+    <!-- CÓMO PEDIR -->
+    <section class="how-to-order-section" id="como-pedir">
+      <div class="container">
+        <h2 class="section-title-center">¿Cómo hacer tu pedido?</h2>
+        <p class="section-subtitle-center">Pedir tus mini donas favoritas es muy fácil y rápido. Sigue estos 3 sencillos pasos:</p>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3 class="step-title">Elige tus sabores</h3>
+            <p class="step-desc">Explora nuestro menú y selecciona la presentación de 8 o 16 piezas que más se te antoje.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3 class="step-title">Revisa tu pedido</h3>
+            <p class="step-desc">Agrega tus bocaditos al carrito. Puedes mezclar diferentes especialidades y snacks.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3 class="step-title">Confirmación por WhatsApp</h3>
+            <p class="step-desc">Envíanos tu selección directamente para preparártelas al momento, calientitas y recién hechas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <div class="container">
+      <img src="assets/logo.png" alt="Bocadit Mini Donas" class="footer-logo">
+      <p class="footer-meta">© 2026 Bocadit Mini Donas · Repostería Artesanal & Antojos</p>
+
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE DE CARRITO -->
+  <aside class="floating-cart-pill" id="floatingCartBtn" role="button" aria-label="Ver pedido actual">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+    <span>Ver pedido</span>
+    <span class="cart-badge-count" id="cartCountBadge">0</span>
+    <span id="cartTotalSummary">$0 MXN</span>
+  </aside>
+
+  <!-- PANEL DESLIZABLE DE PEDIDO (ORDER DRAWER) -->
+  <div class="drawer-overlay" id="drawerOverlay" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+    <div class="order-drawer">
+      <div class="drawer-header">
+        <h3 class="drawer-title" id="drawerTitle">Tu pedido</h3>
+        <button class="btn-close-drawer" id="btnCloseDrawer" aria-label="Cerrar pedido">&times;</button>
+      </div>
+
+      <div class="drawer-body">
+        <div class="cart-items-list" id="cartItemsList">
+          <!-- Items del carrito inyectados por JS -->
+        </div>
+
+        <!-- SECCIÓN DE MÉTODO DE ENTREGA Y COBERTURA (5 KM) -->
+        <div class="delivery-card" id="deliveryCard">
+          <div class="delivery-header">
+            <span class="delivery-label">Forma de entrega:</span>
+            <div class="delivery-toggle" role="tablist">
+              <button class="delivery-toggle-btn active" id="btnMethodPickup" type="button" role="tab" aria-selected="true">
+                <span>🏪 Recoger en tienda</span>
+              </button>
+              <button class="delivery-toggle-btn" id="btnMethodDelivery" type="button" role="tab" aria-selected="false">
+                <span>🛵 A domicilio</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- PANEL RECOGER EN TIENDA -->
+          <div class="delivery-panel" id="panelPickup">
+            <div class="pickup-info-box">
+              <div class="pickup-pin-row">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <strong>Sucursal Bocadit Narvarte</strong>
+              </div>
+              <p class="pickup-address-text">Xochicalco 79, Narvarte Poniente, Benito Juárez, CDMX (CP 03020)</p>
+              <span class="pickup-badge">Sin costo de envío · Preparado al momento</span>
+            </div>
+            <div class="form-group" style="margin-top: 6px;">
+              <label for="pickupCustomerName" class="form-label">Tu nombre (quien recoge):</label>
+              <input type="text" id="pickupCustomerName" class="form-input" placeholder="Ej. Ana Gómez">
+            </div>
+          </div>
+
+          <!-- PANEL ENTREGA A DOMICILIO -->
+          <div class="delivery-panel" id="panelDelivery" style="display: none;">
+            <div class="coverage-rule-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              <span>Cobertura de entrega directa: máximo <strong>5 km</strong> de sucursal</span>
+            </div>
+
+            <!-- APARTADO DE DIRECCIÓN DE ENTREGA (SIEMPRE VISIBLE EN A DOMICILIO) -->
+            <div class="address-fields-group" id="addressFieldsGroup">
+              <div class="address-group-header">
+                <span class="address-group-title">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  Apartado de Dirección de Entrega
+                </span>
+              </div>
+              <p class="address-helper-note">Completa tus datos para que el repartidor lleve tu pedido directo a tu puerta:</p>
+
+              <div class="form-group">
+                <label for="deliveryCustomerName" class="form-label">Nombre de quien recibe *:</label>
+                <input type="text" id="deliveryCustomerName" class="form-input" placeholder="Ej. Carlos Mendoza">
+              </div>
+
+              <div class="form-group">
+                <label for="deliveryStreet" class="form-label">Calle y Número (Ext. e Int.) *:</label>
+                <input type="text" id="deliveryStreet" class="form-input" placeholder="Ej. Morena 230, Int. 302">
+              </div>
+
+              <div class="validation-tabs" style="margin-top: 4px;">
+                <label class="form-label">Código Postal (para validar cobertura 5 km) *:</label>
+                <div class="cp-input-group">
+                  <input type="text" id="inputPostalCode" class="form-input cp-input" placeholder="C.P. (Ej. 03020)" maxlength="5" inputmode="numeric">
+                  <button type="button" class="btn-validate-cp" id="btnValidateCP">Validar C.P.</button>
+                </div>
+                <div class="val-actions-row">
+                  <button type="button" class="btn-gps-locate" id="btnDetectGps">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/></svg>
+                    <span id="btnGpsText">O usar mi ubicación actual (GPS)</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- RESULTADO DE COBERTURA -->
+              <div class="coverage-status-alert" id="coverageStatusAlert" style="display: none;"></div>
+
+              <div class="form-group">
+                <label for="deliveryColonia" class="form-label">Colonia y Alcaldía *:</label>
+                <input type="text" id="deliveryColonia" class="form-input" placeholder="Ej. Narvarte Poniente, Benito Juárez">
+              </div>
+
+              <div class="form-group">
+                <label for="deliveryReference" class="form-label">Referencias de entrega (opcional):</label>
+                <input type="text" id="deliveryReference" class="form-input" placeholder="Ej. Portón café, frente al parque, timbre 302">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="drawer-footer">
+        <div class="drawer-total-row">
+          <span class="drawer-total-label">Total a pagar:</span>
+          <span class="drawer-total-val" id="drawerTotalText">$0 MXN</span>
+        </div>
+        <a href="#" class="btn-whatsapp-order" id="btnSendWhatsApp" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          <span>Confirmar por WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DE HERRAMIENTAS ADMINISTRATIVAS -->
+  <div class="admin-modal" id="adminModal" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+    <div class="admin-box">
+      <div class="admin-header">
+        <h3 id="adminTitle" style="font-family:'Fraunces', serif; font-size:18px;">Herramientas Administrativas de Bocadit</h3>
+        <button class="btn-close-drawer" id="btnCloseAdmin">&times;</button>
+      </div>
+      <div class="admin-body">
+        <div class="admin-tools-row">
+          <button class="btn-admin-tool" id="btnAdminCopy">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copiar Lista de Precios
+          </button>
+          <button class="btn-admin-tool" id="btnAdminCSV">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Exportar CSV
+          </button>
+        </div>
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Producto</th>
+              <th>Categoría</th>
+              <th>Presentaciones</th>
+              <th>Precios Oficiales</th>
+            </tr>
+          </thead>
+          <tbody id="adminTableBody">
+            <!-- Rellenado por JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+    <script type="module" src="js/app.js"></script>
+
+</body>
+</html>

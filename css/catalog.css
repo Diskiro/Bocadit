@@ -1,0 +1,329 @@
+/**
+ * Catálogo y Tarjetas de Producto (SRP: Cuadrícula, filtros y tarjetas)
+ */
+/* ---------------- CATALOG CONTROLS REORGANIZADOS ---------------- */
+    .catalog-section {
+      padding: 10px 0 50px;
+      scroll-margin-top: 85px;
+    }
+
+    .catalog-bar {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 22px;
+    }
+
+    .catalog-heading-wrap {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .menu-petals-icon {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    .catalog-title {
+      font-family: 'Fraunces', serif;
+      font-weight: 800;
+      font-size: 32px;
+      color: var(--color-chocolate);
+      letter-spacing: -0.015em;
+      white-space: nowrap;
+    }
+
+    .search-wrapper {
+      position: relative;
+      flex: 0 1 260px;
+      min-width: 200px;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      color: var(--color-chocolate-muted);
+      pointer-events: none;
+    }
+
+    .search-input {
+      width: 100%;
+      background: var(--bg-white);
+      border: 1.5px solid var(--border-beige);
+      border-radius: var(--radius-pill);
+      padding: 9px 16px 9px 38px;
+      font-family: inherit;
+      font-size: 13.5px;
+      color: var(--color-chocolate);
+      outline: none;
+      transition: border-color var(--duration-hover) var(--ease-smooth),
+                  box-shadow var(--duration-hover) var(--ease-smooth);
+    }
+
+    .search-input::placeholder {
+      color: var(--color-chocolate-dim);
+    }
+
+    .search-input:focus {
+      border-color: var(--color-chocolate);
+      box-shadow: 0 0 0 3px rgba(74, 21, 13, 0.08);
+    }
+
+    .category-pills {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .cat-btn {
+      background: var(--bg-white);
+      border: 1.5px solid var(--border-beige);
+      color: var(--color-chocolate);
+      border-radius: var(--radius-pill);
+      padding: 8px 18px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: inherit;
+      transition: all var(--duration-hover) var(--ease-smooth);
+      white-space: nowrap;
+    }
+
+    .cat-btn svg {
+      width: 16px;
+      height: 16px;
+      stroke-width: 2;
+    }
+
+    .cat-btn:hover {
+      border-color: var(--color-chocolate);
+      background: var(--bg-card-warm);
+    }
+
+    .cat-btn:active {
+      transform: scale(0.97);
+    }
+
+    .cat-btn.active {
+      background: var(--color-chocolate);
+      color: var(--bg-cream);
+      border-color: var(--color-chocolate);
+    }
+
+    /* ---------------- PRODUCT GRID ---------------- */
+    /* Cuadrícula unificada: 4 columnas en desktop */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      background: var(--bg-white);
+      border: 1.5px solid var(--border-beige);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-shadow: var(--shadow-subtle);
+      transition: transform var(--duration-hover) var(--ease-smooth),
+                  box-shadow var(--duration-hover) var(--ease-smooth),
+                  border-color var(--duration-hover) var(--ease-smooth);
+    }
+
+    .product-card:hover {
+      box-shadow: var(--shadow-card);
+      border-color: #D6B595;
+    }
+
+    /* Contenedor de foto con proporción unificada y sin cortes */
+    .card-photo-box {
+      width: 100%;
+      height: 200px;
+      position: relative;
+      background: #FFFDF9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      border-bottom: 1.5px solid var(--border-beige-light);
+    }
+
+    /* El vaso se muestra completo, respetando su escala natural */
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.3s var(--ease-smooth);
+    }
+
+    .product-card:hover .card-img {
+      transform: scale(1.03);
+    }
+
+    .card-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 2;
+      background: var(--color-pink-badge);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      box-shadow: 0 2px 6px rgba(255, 101, 132, 0.35);
+    }
+
+    .card-content {
+      padding: 16px 14px 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    .product-name {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 18.5px;
+      color: var(--color-chocolate);
+      line-height: 1.25;
+      margin-bottom: 4px;
+      min-height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product-sub {
+      font-size: 12px;
+      color: var(--color-chocolate-muted);
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    /* Selector de Presentaciones Unificado */
+    .portion-selector {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
+      min-height: 48px;
+    }
+
+    .portion-chip {
+      flex: 1;
+      background: var(--bg-card-warm);
+      border: 1.5px solid var(--border-beige);
+      border-radius: 10px;
+      padding: 6px 4px;
+      font-size: 11px;
+      color: var(--color-chocolate);
+      cursor: pointer;
+      text-align: center;
+      font-family: inherit;
+      transition: all var(--duration-hover) var(--ease-smooth);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1px;
+    }
+
+    .portion-chip:hover {
+      border-color: var(--color-chocolate);
+    }
+
+    .portion-chip.active {
+      background: var(--bg-chip-active);
+      border-color: var(--color-chocolate);
+      font-weight: 700;
+    }
+
+    .chip-title {
+      font-size: 11px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .chip-currency {
+      font-size: 9.5px;
+      color: var(--color-chocolate-muted);
+      font-weight: 500;
+    }
+
+    .portion-chip.active .chip-currency {
+      color: var(--color-chocolate);
+    }
+
+    /* Botón Elegir */
+    .btn-choose {
+      width: 100%;
+      height: 40px;
+      margin-top: auto;
+      background: var(--color-chocolate);
+      color: var(--bg-cream);
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-family: inherit;
+      transition: background-color var(--duration-hover) var(--ease-smooth),
+                  transform var(--duration-press) var(--ease-smooth);
+    }
+
+    .btn-choose:hover {
+      background: var(--color-chocolate-dark);
+    }
+
+    .btn-choose:active {
+      transform: scale(0.98);
+    }
+
+    /* Estado vacío */
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 20px;
+      background: var(--bg-white);
+      border-radius: var(--radius-lg);
+      border: 1.5px dashed var(--border-beige);
+      display: none;
+    }
+
+    .empty-state h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 20px;
+      color: var(--color-chocolate);
+      margin-bottom: 6px;
+    }
+
+    .empty-state p {
+      font-size: 14px;
+      color: var(--color-chocolate-muted);
+    }

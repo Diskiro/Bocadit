@@ -1,0 +1,85 @@
+/**
+ * Herramientas Administrativas (SRP: Modal de catálogo)
+ */
+/* ---------------- ADMIN MODAL ---------------- */
+    .admin-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(74, 21, 13, 0.5);
+      backdrop-filter: blur(4px);
+      z-index: 300;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .admin-modal.open {
+      display: flex;
+    }
+
+    .admin-box {
+      background: var(--bg-white);
+      border: 1.5px solid var(--border-beige);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 860px;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 12px 36px rgba(74, 21, 13, 0.2);
+    }
+
+    .admin-header {
+      padding: 18px 22px;
+      border-bottom: 1.5px solid var(--border-beige-light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .admin-body {
+      padding: 20px 22px;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .admin-tools-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .btn-admin-tool {
+      background: var(--bg-cream);
+      border: 1.5px solid var(--border-beige);
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-chocolate);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .admin-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      text-align: left;
+    }
+
+    .admin-table th {
+      background: var(--bg-cream);
+      padding: 10px 14px;
+      border-bottom: 1.5px solid var(--border-beige);
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+    }
+
+    .admin-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border-beige-light);
+    }

@@ -1,0 +1,21 @@
+/**
+ * Pie de Página (SRP: Información de cierre)
+ */
+/* ---------------- FOOTER & ADMIN ---------------- */
+    footer {
+      background: var(--bg-cream);
+      padding: 36px 0 30px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--color-chocolate-muted);
+    }
+
+    .footer-logo {
+      height: 44px;
+      margin-bottom: 12px;
+      object-fit: contain;
+    }
+
+    .footer-meta {
+      margin-bottom: 16px;
+    }

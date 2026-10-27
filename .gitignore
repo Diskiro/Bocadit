@@ -1,0 +1,11 @@
+# Dependencies / System
+.DS_Store
+Thumbs.db
+*.log
+
+# Scratch / Temporary scripts
+scratch/
+
+# IDE
+.vscode/
+.idea/

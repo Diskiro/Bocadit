@@ -1,0 +1,307 @@
+/**
+ * Métodos de Entrega y Cobertura (SRP: GPS, Código Postal y dirección)
+ */
+/* ---------------- DELIVERY & COVERAGE SECTION ---------------- */
+    .delivery-card {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1.5px dashed var(--border-beige);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .delivery-header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .delivery-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-chocolate);
+      letter-spacing: -0.2px;
+    }
+
+    .delivery-toggle {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--bg-card-warm);
+      padding: 3px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-beige);
+      gap: 4px;
+    }
+
+    .delivery-toggle-btn {
+      border: none;
+      background: transparent;
+      padding: 7px 8px;
+      border-radius: var(--radius-pill);
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--color-chocolate-muted);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      transition: all var(--duration-hover) var(--ease-smooth);
+    }
+
+    .delivery-toggle-btn.active {
+      background: var(--bg-white);
+      color: var(--color-chocolate);
+      font-weight: 700;
+      box-shadow: 0 1px 3px rgba(74, 21, 13, 0.08);
+    }
+
+    .delivery-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .pickup-info-box {
+      background: var(--bg-white);
+      border: 1.5px solid var(--border-beige);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+    }
+
+    .pickup-pin-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--color-chocolate);
+      font-size: 13px;
+    }
+
+    .pickup-pin-row svg {
+      color: var(--color-pink-deep);
+    }
+
+    .pickup-address-text {
+      font-size: 12px;
+      color: var(--color-chocolate-muted);
+      margin-top: 4px;
+      line-height: 1.35;
+    }
+
+    .pickup-badge {
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #0F6E36;
+      background: #E6F7ED;
+      padding: 2px 8px;
+      border-radius: var(--radius-pill);
+    }
+
+    .coverage-rule-badge {
+      background: #FFF8E6;
+      border: 1px solid #FFE3A3;
+      color: #8C5800;
+      padding: 8px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 11.5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      line-height: 1.3;
+    }
+
+    .coverage-rule-badge svg {
+      flex-shrink: 0;
+      color: #D97706;
+    }
+
+    .val-instruction {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--color-chocolate);
+    }
+
+    .val-actions-row {
+      margin-top: 6px;
+    }
+
+    .btn-gps-locate {
+      width: 100%;
+      background: var(--bg-white);
+      border: 1.5px solid var(--border-beige);
+      color: var(--color-chocolate);
+      font-family: inherit;
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 9px 12px;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      transition: all var(--duration-hover) var(--ease-smooth);
+    }
+
+    .btn-gps-locate:hover {
+      border-color: var(--color-pink-deep);
+      color: var(--color-pink-deep);
+      background: #FFF5F7;
+    }
+
+    .val-divider {
+      text-align: center;
+      position: relative;
+      margin: 8px 0;
+    }
+
+    .val-divider::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      height: 1px;
+      background: var(--border-beige);
+    }
+
+    .val-divider span {
+      position: relative;
+      background: var(--bg-cream);
+      padding: 0 8px;
+      font-size: 11px;
+      color: var(--color-chocolate-muted);
+    }
+
+    .cp-input-group {
+      display: flex;
+      gap: 6px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .form-label {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--color-chocolate);
+    }
+
+    .form-input {
+      width: 100%;
+      border: 1.5px solid var(--border-beige);
+      border-radius: var(--radius-sm);
+      padding: 8px 10px;
+      font-family: inherit;
+      font-size: 12.5px;
+      color: var(--color-chocolate);
+      background: var(--bg-white);
+      outline: none;
+      transition: border-color var(--duration-hover) var(--ease-smooth);
+    }
+
+    .form-input:focus {
+      border-color: var(--color-pink-deep);
+      box-shadow: 0 0 0 2px rgba(238, 71, 96, 0.12);
+    }
+
+    .cp-input {
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .btn-validate-cp {
+      background: var(--color-chocolate);
+      color: #FFFFFF;
+      border: none;
+      padding: 0 14px;
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: opacity var(--duration-hover) var(--ease-smooth);
+    }
+
+    .btn-validate-cp:hover {
+      opacity: 0.9;
+    }
+
+    .coverage-status-alert {
+      padding: 9px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .coverage-status-alert.success {
+      background: #E6F7ED;
+      border: 1px solid #A3E6BA;
+      color: #0F6E36;
+    }
+
+    .coverage-status-alert.error {
+      background: #FFF0F0;
+      border: 1px solid #FECACA;
+      color: #991B1B;
+    }
+
+    .coverage-status-alert.info {
+      background: #EFF6FF;
+      border: 1px solid #BFDBFE;
+      color: #1E40AF;
+    }
+
+    .address-fields-group {
+      background: var(--bg-white);
+      border: 1.5px solid var(--border-beige);
+      border-radius: var(--radius-md);
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .address-group-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 6px;
+      border-bottom: 1.5px dashed var(--border-beige);
+    }
+
+    .address-group-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-chocolate);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .address-helper-note {
+      font-size: 11px;
+      color: var(--color-chocolate-muted);
+      margin-top: -2px;
+    }
+
+    .gps-autofill-hint {
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 11.5px;
+      color: #065F46;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      border-left: 3px solid #10B981;
+      line-height: 1.4;
+    }
+

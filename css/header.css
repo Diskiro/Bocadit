@@ -1,0 +1,143 @@
+/**
+ * Header y Barra de Anuncios (SRP: Navegación y logo)
+ */
+/* ---------------- HEADER COMPACTO Y FIJO ---------------- */
+    /* Solo la barra compacta principal queda fija al hacer scroll */
+    .site-header {
+      background: var(--bg-cream);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1.5px solid var(--border-beige-light);
+      box-shadow: 0 2px 10px rgba(74, 21, 13, 0.03);
+    }
+
+    .header-main {
+      padding: 6px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      position: relative;
+      z-index: 105;
+      margin-bottom: -16px;
+    }
+
+    /* Logo ampliado, protagonista y fiel a la referencia */
+    .logo-img {
+      height: 70px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 2px 5px rgba(74, 21, 13, 0.08));
+      transition: transform var(--duration-hover) var(--ease-smooth);
+    }
+
+    .logo-img:hover {
+      transform: scale(1.02);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-link {
+      color: var(--color-chocolate);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      position: relative;
+      padding-bottom: 6px;
+      transition: color var(--duration-hover) var(--ease-smooth);
+    }
+
+    .nav-link.active {
+      font-weight: 700;
+    }
+
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2.5px;
+      background: var(--color-chocolate);
+      border-radius: 2px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-order-cta {
+      background: var(--color-chocolate);
+      color: var(--bg-cream);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 22px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background-color var(--duration-hover) var(--ease-smooth),
+                  transform var(--duration-press) var(--ease-smooth);
+    }
+
+    .btn-order-cta:hover {
+      background: var(--color-chocolate-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-order-cta:active {
+      transform: scale(0.98);
+    }
+
+    /* Franja rosa: más delgada, sutil y elegante */
+    .announcement-bar {
+      background: var(--color-pink-soft);
+      padding: 3px 0;
+      min-height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--border-beige-light);
+    }
+
+    .announcement-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--color-chocolate);
+      letter-spacing: 0.01em;
+    }
+
+    .sprinkles-svg {
+      display: inline-block;
+      vertical-align: middle;
+      flex-shrink: 0;
+    }

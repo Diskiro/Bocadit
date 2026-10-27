@@ -1,0 +1,35 @@
+/**
+ * Bocadit Design Tokens (SRP: Variables globales)
+ */
+:root {
+      /* Bocadit Confectionery Palette */
+      --bg-cream: #FFF8EC;
+      --bg-white: #FFFFFF;
+      --bg-card-warm: #FFFDF9;
+      --bg-chip-active: #FFF4E5;
+      
+      --color-chocolate: #4A150D;
+      --color-chocolate-dark: #350D06;
+      --color-chocolate-muted: #8E6D64;
+      --color-chocolate-dim: #B39990;
+      
+      --color-pink-accent: #FF86A4;
+      --color-pink-soft: #FFDEE6;
+      --color-pink-badge: #FF6584;
+      
+      --border-beige: #E8CDB0;
+      --border-beige-light: #F3E5D8;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 18px;
+      --radius-pill: 9999px;
+      
+      --shadow-subtle: 0 4px 14px rgba(74, 21, 13, 0.04);
+      --shadow-card: 0 6px 20px rgba(74, 21, 13, 0.07);
+      --shadow-drawer: -6px 0 32px rgba(74, 21, 13, 0.16);
+      
+      --ease-smooth: cubic-bezier(0.23, 1, 0.32, 1);
+      --duration-hover: 180ms;
+      --duration-press: 120ms;
+    }

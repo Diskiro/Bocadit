@@ -1,0 +1,47 @@
+/**
+ * Reset y Estilos Base (SRP: Fundamentos HTML y scrollbar)
+ */
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 82px;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--color-chocolate);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.5;
+      min-height: 100vh;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background: var(--color-pink-soft);
+      color: var(--color-chocolate);
+    }
+
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: var(--border-beige) transparent;
+    }
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--border-beige);
+      border-radius: 4px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
