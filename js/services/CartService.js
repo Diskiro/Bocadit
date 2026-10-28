@@ -92,6 +92,27 @@ export class CartService {
         return { ok: true, msg: 'Listo para confirmar' };
       }
 
+      /**
+       * Genera el enlace de Google Maps para el repartidor.
+       * Prioriza coordenadas satelitales si existen (GPS) o genera la búsqueda por dirección completa.
+       * @returns {string}
+       */
+      getGoogleMapsUrl() {
+        if (this.delivery.gpsCoords?.lat && this.delivery.gpsCoords?.lon) {
+          return `https://maps.google.com/?q=${this.delivery.gpsCoords.lat},${this.delivery.gpsCoords.lon}`;
+        }
+        if (this.delivery.street && this.delivery.street.trim()) {
+          const parts = [
+            this.delivery.street.trim(),
+            this.delivery.colonia ? this.delivery.colonia.trim() : '',
+            this.delivery.postalCode && this.delivery.postalCode.trim() ? `CP ${this.delivery.postalCode.trim()}` : '',
+            'CDMX, México'
+          ].filter(Boolean);
+          return `https://maps.google.com/?q=${encodeURIComponent(parts.join(', '))}`;
+        }
+        return '';
+      }
+
       generateWhatsAppUrl() {
         const phone = "525615381502";
         if (this.cart.length === 0) {
@@ -128,8 +149,9 @@ export class CartService {
           if (this.delivery.distanceKm) {
             msg += `📏 *Distancia a tienda:* ~${this.delivery.distanceKm} km\n`;
           }
-          if (this.delivery.gpsCoords) {
-            msg += `🗺️ *Ubicación Maps:* https://maps.google.com/?q=${this.delivery.gpsCoords.lat},${this.delivery.gpsCoords.lon}\n`;
+          const mapsUrl = this.getGoogleMapsUrl();
+          if (mapsUrl) {
+            msg += `🗺️ *Ubicación Maps:* ${mapsUrl}\n`;
           }
         }
 
