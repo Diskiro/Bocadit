@@ -1,19 +1,31 @@
 {
-  "hosting": {
-    "site": "bocadit",
-    "public": ".",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**",
-      "scratch/**"
-    ],
-    "cleanUrls": true,
-    "rewrites": [
-      {
-        "source": "/menu",
-        "destination": "/menu.html"
-      }
-    ]
-  }
+  "hosting": [
+    {
+      "site": "bocadit",
+      "public": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**",
+        "scratch/**"
+      ],
+      "cleanUrls": true,
+      "rewrites": [
+        {
+          "source": "/menu",
+          "destination": "/menu.html"
+        }
+      ]
+    },
+    {
+      "site": "bocadit-d5a7c",
+      "redirects": [
+        {
+          "source": "/**",
+          "destination": "https://bocadit.web.app",
+          "type": 301
+        }
+      ]
+    }
+  ]
 }
