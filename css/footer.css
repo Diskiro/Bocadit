@@ -1,21 +1,80 @@
 /**
- * Pie de Página (SRP: Información de cierre)
+ * Pie de Página (SRP: Información de cierre y redes sociales)
  */
-/* ---------------- FOOTER & ADMIN ---------------- */
-    footer {
-      background: var(--bg-cream);
-      padding: 36px 0 30px;
-      text-align: center;
-      font-size: 13px;
-      color: var(--color-chocolate-muted);
-    }
+/* ---------------- FOOTER & SOCIAL ---------------- */
+footer {
+  background: var(--bg-cream);
+  padding: 40px 0 32px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-chocolate-muted);
+  border-top: 1px solid var(--border-beige);
+}
 
-    .footer-logo {
-      height: 44px;
-      margin-bottom: 12px;
-      object-fit: contain;
-    }
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
 
-    .footer-meta {
-      margin-bottom: 16px;
-    }
+.footer-logo {
+  height: 44px;
+  margin-bottom: 0;
+  object-fit: contain;
+}
+
+.footer-social-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0;
+}
+
+.footer-social-heading {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--color-chocolate);
+}
+
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--duration-hover) var(--ease-smooth);
+}
+
+.footer-whatsapp-btn {
+  background: #25D366;
+  color: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(37, 211, 102, 0.25);
+}
+
+.footer-whatsapp-btn:hover {
+  background: #1EBE5D;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+  color: #FFFFFF;
+}
+
+.footer-meta {
+  font-size: 12px;
+  margin-top: 4px;
+  color: var(--color-chocolate-muted);
+}
