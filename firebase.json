@@ -10,6 +10,26 @@
         "scratch/**"
       ],
       "cleanUrls": true,
+      "headers": [
+        {
+          "source": "**/products.js",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(js|html)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, must-revalidate"
+            }
+          ]
+        }
+      ],
       "rewrites": [
         {
           "source": "/menu",
