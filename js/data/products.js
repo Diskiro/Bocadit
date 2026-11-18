@@ -279,7 +279,7 @@ export const CATALOG_PRODUCTS = [
             label: "Porción Individual",
             price: 90,
             currency: "MXN",
-            image: "https://img0.didiglobal.com/static/soda_public/img_217262a4624f9c43bc0c59c72fb758a0.jpg.webp"
+            image: "assets/crepa_queso_jamon.jpg"
           }
         ]
       }
