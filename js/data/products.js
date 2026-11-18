@@ -12,7 +12,7 @@ export const CATALOG_PRODUCTS = [
           {
             portion: "16pzas",
             label: "16 piezas",
-            price: 69,
+            price: 70,
             currency: "MXN",
             image: "https://img0.didiglobal.com/static/soda_public/img_b7d7c0c045cbfdb409831f186389bdd3.jpg.webp"
           },
@@ -34,7 +34,7 @@ export const CATALOG_PRODUCTS = [
           {
             portion: "16pzas",
             label: "16 piezas",
-            price: 69,
+            price: 70,
             currency: "MXN",
             image: "https://img0.didiglobal.com/static/soda_public/img_6101a7abee32c836d3c26d1ccfc0d815.jpg.webp"
           },
@@ -56,7 +56,7 @@ export const CATALOG_PRODUCTS = [
           {
             portion: "16pzas",
             label: "16 piezas",
-            price: 69,
+            price: 70,
             currency: "MXN",
             image: "https://img0.didiglobal.com/static/soda_public/img_9eb572adfa29ddfbc15a2b85081f5883.jpg.webp"
           },
@@ -78,7 +78,7 @@ export const CATALOG_PRODUCTS = [
           {
             portion: "16pzas",
             label: "16 piezas",
-            price: 69,
+            price: 70,
             currency: "MXN",
             image: "https://img0.didiglobal.com/static/soda_public/img_dd364b0b31a119e7cb5b139664b66505.jpg.webp"
           },
@@ -100,7 +100,7 @@ export const CATALOG_PRODUCTS = [
           {
             portion: "16pzas",
             label: "16 piezas",
-            price: 69,
+            price: 70,
             currency: "MXN",
             image: "https://img0.didiglobal.com/static/soda_public/img_1fa4379ae2f774875fefb25660157a5b.jpg.webp"
           },
@@ -122,7 +122,7 @@ export const CATALOG_PRODUCTS = [
           {
             portion: "16pzas",
             label: "16 piezas",
-            price: 69,
+            price: 70,
             currency: "MXN",
             image: "https://img0.didiglobal.com/static/soda_public/img_08f8f5b45a0a8b984a2a21f9a7c6e84b.jpg.webp"
           },
@@ -144,7 +144,7 @@ export const CATALOG_PRODUCTS = [
           {
             portion: "16pzas",
             label: "16 piezas",
-            price: 69,
+            price: 70,
             currency: "MXN",
             image: "https://img0.didiglobal.com/static/soda_public/img_c5c01325fd28c2450f5a658140b9b3e7.jpg.webp"
           },
@@ -166,7 +166,7 @@ export const CATALOG_PRODUCTS = [
           {
             portion: "16pzas",
             label: "16 piezas",
-            price: 69,
+            price: 70,
             currency: "MXN",
             image: "https://img0.didiglobal.com/static/soda_public/img_44253a7b510f2a9c362017bb44053747.jpg.webp"
           },
@@ -188,7 +188,7 @@ export const CATALOG_PRODUCTS = [
           {
             portion: "16pzas",
             label: "16 piezas",
-            price: 79,
+            price: 80,
             currency: "MXN",
             image: "https://img0.didiglobal.com/static/soda_public/img_e493e031e0d5aca2fad61e8aebb0373a.jpg.webp"
           },
@@ -210,7 +210,7 @@ export const CATALOG_PRODUCTS = [
           {
             portion: "16pzas",
             label: "16 piezas",
-            price: 79,
+            price: 80,
             currency: "MXN",
             image: "https://img0.didiglobal.com/static/soda_public/img_a9474fa6d497b1dbe2c2d0e967308cdb.jpg.webp"
           },
