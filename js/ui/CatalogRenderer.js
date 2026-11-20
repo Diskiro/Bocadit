@@ -164,6 +164,22 @@ export class CatalogRenderer {
           whatsappBtn.classList.add('disabled');
           if (spanText) spanText.textContent = check.msg;
         }
+
+        const freeDeliveryStatus = document.getElementById('freeDeliveryStatus');
+        if (freeDeliveryStatus) {
+          if (cartService.delivery.method === 'delivery' && cartService.cart.length > 0) {
+            if (cartService.isEligibleForFreeDelivery()) {
+              freeDeliveryStatus.className = 'free-delivery-status unlocked';
+              freeDeliveryStatus.innerHTML = `🎉 ¡Tu pedido califica para <strong>Envío Gratis</strong>!`;
+            } else {
+              const missing = cartService.getMissingForFreeDelivery();
+              freeDeliveryStatus.className = 'free-delivery-status pending';
+              freeDeliveryStatus.innerHTML = `🛵 Mínimo de compra $80 para envío gratis. <strong>Agrega $${missing} MXN más</strong>.`;
+            }
+          } else {
+            freeDeliveryStatus.style.display = 'none';
+          }
+        }
       }
 
       static renderAdminTable(products, tableBody) {
